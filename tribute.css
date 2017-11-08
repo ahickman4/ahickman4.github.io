@@ -1,0 +1,262 @@
+body, html{
+	height: 100%;
+    margin: 0;
+    font-size: 16px;
+    position: relative;
+}
+
+hr{
+	width: 87vw; 
+	margin-top: 70px;
+	border-style: solid;
+	opacity: .7;
+	border: 1px outset;
+	border-color: #3A74AF;
+	opacity: .8;
+}
+
+.nav-bar{
+	position: fixed;                         /*keep on page when it scroll*/
+    z-index: 1;                              /*so that it appear in front of body elements*/
+    background-color: rgba(56, 55, 55, .8);  /*change opacity this way so it wont cascade down to child elements*/
+    width: 100vw;                            /*width of nav bar determined by browser width*/
+    height: 47px;                            /*fixed height*/
+    top: -1px;
+    max-width: 100%;                         /*max width of nav bar will be 100% of body, not html*/
+    font-family: 'Alegreya SC';
+}
+
+
+#nav-head-text{
+	float: left;
+	margin: 1px 0 0 0;
+}
+
+#hed-text{
+	color: #929298;
+	position: fixed;          /*keep div bar in fixed location so that it doesnt forcefully move any other block element it interacts with (like div-nav-links). Instead, they will overlap*/
+	margin: 0 0 0 10;
+	font-size: 32.5px;
+}
+
+
+
+#div-nav-links{
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 20px;
+}
+
+
+.nav-links{
+
+	opacity: .6;
+	font-weight:900;
+	font-size: 17px;
+	letter-spacing: .3vw;
+	list-style-type: none;
+	margin-top: -.35vh;
+	margin-left: 1.6vw;
+	float: right;
+}
+
+li.nav-links > a{
+	text-decoration: none;
+  	color: #FFFEFE;
+}
+ 
+ #bsbg{
+
+ 	overflow: hidden;           /*so that it will hide any content that is being covered by other blocks (like the page-background (second scuba image, etc)) instead of forcefully pushing blocks down and showing the whole image*/
+
+ }
+
+.scuba-bg{
+    background-image: url(images/tribute/background.jpg);
+	background-position: center;           /*this will keep the background picture centered no matter the browser size*/
+    background-size: cover;                /*scale background image so that it completely covers the background (may crop image)*/
+    background-repeat: no-repeat; 
+    background-attachment: fixed;          /*create parallax scrolling affect by fixing image to background block*/
+    transform: translateY(-173px);         /*used to move picture up, margins wouldnt work because picture is fixed*/
+	margin-bottom: -270px;                 /*crop bottom of picture*/
+	height: 100%;                          /*will show the whole picture*/
+	overflow: hidden;
+}
+
+.scuba-text{
+	position: absolute;
+	text-align: center;
+	bottom: 80%;
+	right: 37vw;
+	font-family: 'Cinzel';
+	font-size: 27px;
+	color: white;
+	margin-top: -500px;
+}
+
+
+.page-background{
+	margin-top: -130px;                  /*move body contect after first scuba-img up*/
+	transform-style: preserve-3d;        /*use this to have background in front of first scuba pic. Cant use z-index because z-index only effect elements that have position other than static (the default)*/ 
+	border-radius: 30px 30px 0px 0px;
+	background-image: url(images/tribute/dadscuba.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 1170px;
+	color: white;                        /*color of text of child elements*/
+	text-shadow: 1px 1px 5px black;
+}
+
+.biography{            
+	height: 317px;
+	border-radius: 20px 20px 0 0;
+	margin-top: -40px;
+	margin-left: -5px;
+	border-style: solid;
+	border-color: rgba(0, 0, 0, 0);    /*Add border to define padding. Otherwise the content auto adjusts*/
+}
+
+.biography > a{
+	position: absolute;                /*adjust hyperlink to get page to jump to the right spot. Relative to body because no parent has position: relative*/
+	top: -200px;
+}
+
+#bioBlock{
+	margin-top: 50px;
+	border: 3px solid rgba(0, 0, 0, .2);
+	width: 37vw;
+	border-radius: 0px 90px 90px 0;
+}
+
+#bioBlock > p{
+	width: 34vw;
+	margin: 40 0 0 4;
+	height: 80px;
+	font-size: 1.6rem;
+	padding: 0 0 110 0;
+}
+
+#bioUl-1{
+	font-size: 28;
+	float: right;
+	margin-right: 33vw;
+	font-weight: 400;
+	margin-top: -190px;
+	margin-left: 40vw;
+}
+
+#bioUl-2{
+	font-size: 28;
+	float: right;
+	margin-right: 9vw;
+	margin-top: -190px;
+	margin-left: 60vw;}
+
+#accomplishments{
+	background-position: center;
+    background-size: 1900px 100%;
+	border: 3px solid rgba(0, 0, 0, .2);
+	height: 600px;
+	text-shadow: 2px 2px 5px black;
+	margin: 124px 2% 160px 2%;
+	border-radius: 150px 150px 150px 150px;
+	text-align: center;                    /*center text of accomplishments block*/
+	font-size: 60px;
+}
+
+#accUl{
+	display: flex;
+	margin-top: 140px;
+}
+
+.accLi{
+	list-style-type: none;
+	font-size: 40px;
+	width: 18vw;
+  	text-shadow: 2px 2px 5px black;
+}
+
+
+#accomplishments > a{
+	position: absolute;
+	top: 300px;
+}
+
+#hobbies{
+	height: 1000px;
+	background-image: url(images/tribute/montage.jpg);
+	background-size: contain;
+	background-position: center;
+	margin-top: -50px;
+	position: relative;
+}
+
+.hobbyUL-1{
+	position: absolute;
+	top: 100px;
+	list-style-type: none;
+	margin-left: 0vw;
+	text-align: center;
+}
+
+.hobby1Li{
+	margin-top: 10px;
+	font-size: 45px;
+	margin-bottom: 200px;
+}
+
+.hobbyUL-2{
+	position: absolute;
+	float: right;
+	top: 100px;
+	margin-left: 32vw;
+	padding-right: 670px;
+	margin-right: 40vw;
+	list-style-type: none;
+	text-align: center;
+}
+
+.hobby2Li{
+	margin-top: 10px;
+	font-size: 45px;
+	margin-bottom: 200px;
+	margin-right: -35vw;
+}
+
+.hobbyUL-3{
+	float: right;
+	position: absolute;
+	top: 100px;
+	margin-left: 70vw;
+	list-style-type: none;
+	text-align: center;
+}
+
+.hobby3Li{
+	margin-top: 10px;
+	font-size: 45px;
+	margin-bottom: 200px;
+}
+
+.lFooter{
+	background-color: #888;
+	margin-bottom: -200px;
+}
+
+#hobbies > h2 {
+	text-align: center;
+	font-size: 50px;
+	height: 1000px;
+	text-shadow: 0px 0px 1px black;
+}
+
+#hobbies > a{
+	position: absolute;
+	bottom: 100px;
+	padding: 10px;               /*Link position wouldnt change. For some reason adding padding fixed it*/
+}
+
+.nav-links:hover{
+	opacity: 1;
+	text-shadow: 0px 0px 20px black, 0px 0px 20px black, 0px 0px 20px black;
+}
