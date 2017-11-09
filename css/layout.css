@@ -330,30 +330,36 @@ ul#nav li.current a { color: #F06000; }
    border-radius: 3px 0 0 3px;
 }
 
-.python {
-  	width: 70%;
-  	-moz-animation: python 2s ease;
-  	-webkit-animation: python 2s ease;
+@media only screen and (min-width: 0px) and (max-width: 346px) {
+  .bars li em{
+    top: -40px;
+  }
 }
-.netdesign {
-  	width: 60%;
-  	-moz-animation: netdesign 2s ease;
-  	-webkit-animation: netdesign 2s ease;
+
+.adelec {
+  	width: 70%;
+  	-moz-animation: adelec 2s ease;
+  	-webkit-animation: adelec 2s ease;
 }
 .programming {
-  	width: 55%;
+  	width: 60%;
   	-moz-animation: programming 2s ease;
   	-webkit-animation: programming 2s ease;
 }
-.webdev {
-  	width: 45%;
-  	-moz-animation: webdev 2s ease;
-  	-webkit-animation: webdev 2s ease;
-}
-.edesign {
+.netarch {
   	width: 55%;
-  	-moz-animation: edesign 2s ease;
-  	-webkit-animation: edesign 2s ease;
+  	-moz-animation: netarch 2s ease;
+  	-webkit-animation: netarch 2s ease;
+}
+.pcb {
+  	width: 45%;
+  	-moz-animation: pcb 2s ease;
+  	-webkit-animation: pcb 2s ease;
+}
+.highfsys {
+  	width: 55%;
+  	-moz-animation: highfsys 2s ease;
+  	-webkit-animation: highfsys 2s ease;
 }
 .jquery {
   	width: 50%;
@@ -361,23 +367,23 @@ ul#nav li.current a { color: #F06000; }
   	-webkit-animation: jquery 2s ease;
 }
 
-@-moz-keyframes python {
+@-moz-keyframes adelec {
   0%   { width: 0px;  }
   100% { width: 70%;  }
 }
-@-moz-keyframes netdesign {
+@-moz-keyframes programming {
   0%   { width: 0px;  }
   100% { width: 60%;  }
 }
-@-moz-keyframes programming {
+@-moz-keyframes netarch {
   0%   { width: 0px;  }
   100% { width: 55%;  }
 }
-@-moz-keyframes webdev {
+@-moz-keyframes pcb {
   0%   { width: 0px;  }
   100% { width: 45%;  }
 }
-@-moz-keyframes edesign {
+@-moz-keyframes highfsys {
   0%   { width: 0px;  }
   100% { width: 55%;  }
 }
@@ -386,23 +392,23 @@ ul#nav li.current a { color: #F06000; }
   100% { width: 50%;  }
 }
 
-@-webkit-keyframes python {
+@-webkit-keyframes adelec {
   0%   { width: 0px;  }
   100% { width: 70%;  }
 }
-@-webkit-keyframes netdesign {
+@-webkit-keyframes programming {
   0%   { width: 0px;  }
   100% { width: 60%;  }
 }
-@-webkit-keyframes programming {
+@-webkit-keyframes netarch {
   0%   { width: 0px;  }
   100% { width: 55%;  }
 }
-@-webkit-keyframes webdev {
+@-webkit-keyframes pcb {
   0%   { width: 0px;  }
   100% { width: 45%;  }
 }
-@-webkit-keyframes edesign {
+@-webkit-keyframes highfsys {
   0%   { width: 0px;  }
   100% { width: 55%;  }
 }
